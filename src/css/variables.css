@@ -1,0 +1,9 @@
+:root {
+  --font-family-title: 'Bangers', cursive;
+  --font-family-base: 'Open Sans', sans-serif;
+  --blue: #0282F9;
+  --black: #000;
+  --white: #FFF;
+  --transition-time: 330ms;
+  --transition-function: cubic-bezier(0.790, 0.010, 0.375, 0.995);
+}

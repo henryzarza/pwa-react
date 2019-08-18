@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Bangers');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import './variables.css';
+* {
+  box-sizing: border-box;
+  font-family: var(--font-family-base);
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: linear-gradient(to right top, #0282F9, #3494FB, #55A6FC, #73B7FB, #91C7FA);
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  -moz-osx-font-smoothing: grayscale;
+}
