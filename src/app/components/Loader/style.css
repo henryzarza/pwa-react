@@ -1,0 +1,55 @@
+.container-loader {
+  display: flex;
+  height: calc(100vh - 6rem);
+  justify-content: center;
+  position: relative;
+}
+
+.loader {
+  height: 5rem;
+  position: absolute;
+  top: 50%;
+  width: 5rem;
+}
+
+.loader::before,
+.loader::after {
+  animation: wave 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+  border: 0.2rem solid var(--white);
+  border-radius: 50%;
+  content: '';
+  left: 0;
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+}
+
+.loader::before {
+  height: 50px;
+  top: 10px;
+  width: 50px;
+}
+
+.loader::after {
+  animation-delay: -0.5s;
+  height: 70px;
+  width: 70px;
+}
+
+.loader-text {
+  color: var(--white);
+  font-size: 0.85rem;
+  position: absolute;
+  top: 63%;
+}
+
+@keyframes wave {
+  from {
+    opacity: 1;
+    transform: scale(0);
+  }
+  to {
+    opacity: 0;
+    transform: scale(1);
+  }
+}

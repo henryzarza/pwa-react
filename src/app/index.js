@@ -1,13 +1,16 @@
 import React from 'react';
 
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 import Characters from './screens/Characters';
 
 function App() {
   return (
-    <div>
-      This is the App
+    <>
+      <Navbar />
       <Characters />
-    </div>
+      <Footer />
+    </>
   );
 }
 

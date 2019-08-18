@@ -1,0 +1,32 @@
+.navbar {
+  align-items: center;
+  background-color: var(--white);
+  box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.3);
+  display: flex;
+  height: 4rem;
+  justify-content: space-between;
+  left: 0;
+  padding: 0.6rem 1rem;
+  position: fixed;
+  right: 0;
+  z-index: 1;
+}
+
+.logo {
+  width: 3rem;
+}
+
+.link {
+  border: 0.05rem solid var(--blue);
+  border-radius: 0.25rem;
+  color: var(--blue);
+  padding: 0.25rem 1rem;
+  text-decoration: none;
+  transition: all var(--transition-time) var(--transition-function);
+}
+
+.link:hover,
+.link:active {
+  background-color: var(--blue);
+  color: var(--white);
+}

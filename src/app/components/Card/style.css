@@ -1,0 +1,113 @@
+.card {
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.3);
+  max-width: 100%;
+  position: relative;
+  width: 15rem;
+}
+
+.card:hover .card-image {
+  filter: blur(3px);
+}
+
+.card:hover .card-content {
+  transform: scaleY(1);
+}
+
+.character-title {
+  align-items: center;
+  background-color: var(--blue);
+  bottom: -15%;
+  color: var(--white);
+  display: flex;
+  font-family: var(--font-family-title);
+  font-size: 2rem;
+  height: 4rem;
+  justify-content: center;
+  left: -15%;
+  padding: 0.5rem;
+  position: absolute;
+  width: 130%;
+}
+
+.character-title::before,
+.character-title::after {
+  content: '';
+  position: absolute;
+  top: -58%;
+  z-index: -1;
+}
+
+.character-title::before {
+  border-left: 37px solid transparent;
+  border-right: 37px solid var(--dark-blue);
+  border-top: 37px solid transparent;
+  left: -11.8%;
+}
+
+.character-title::after {
+  border-left: 37px solid var(--dark-blue);
+  border-right: 37px solid transparent;
+  border-top: 37px solid transparent;
+  right: -12%;
+}
+
+.character-name {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.card-content {
+  background-color: rgba(0, 0, 0, 0.65);
+  border-radius: 0.3rem 0.3rem 0 0;
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9rem;
+  height: 98%;
+  overflow-y: auto;
+  padding: 1rem;
+  position: absolute;
+  top: 0;
+  transform: scaleY(0);
+  transform-origin: 0 100%;
+  transition: transform var(--transition-time) var(--transition-function);
+  user-select: none;
+}
+
+.card-image {
+  border-radius: 0.3rem;
+  min-height: 20rem;
+  width: 100%;
+}
+
+.character-info {
+  display: flex;
+  margin-top: 1rem;
+}
+
+.character-badge {
+  background-color: var(--light-blue);
+  border: 1px solid var(--white);
+  border-radius: 1rem;
+  margin-right: 0.8rem;
+  padding: 0.2rem 0.5rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .card {
+    width: 13rem;
+  }
+  .card-content {
+    height: 95%;
+  }
+  .character-title::before,
+  .character-title::after {
+    top: -2.2rem;
+  }
+  .character-title::before {
+    left: -13.8%;
+  }
+  .character-title::after {
+    right: -13.8%;
+  }
+}
