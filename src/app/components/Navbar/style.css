@@ -16,17 +16,8 @@
   width: 3rem;
 }
 
-.link {
-  border: 0.05rem solid var(--blue);
-  border-radius: 0.25rem;
+.navbar-text {
   color: var(--blue);
-  padding: 0.25rem 1rem;
-  text-decoration: none;
-  transition: all var(--transition-time) var(--transition-function);
-}
-
-.link:hover,
-.link:active {
-  background-color: var(--blue);
-  color: var(--white);
+  font-size: 1rem;
+  font-weight: 600;
 }

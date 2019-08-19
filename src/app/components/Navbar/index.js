@@ -8,7 +8,7 @@ function Navbar() {
   return (
     <nav className="navbar">
       <img className="logo" src={logo} alt="DC comics" />
-      <a href="https://www.google.com/" className="link">Star Hero</a>
+      <span className="navbar-text">DC Heroes</span>
     </nav>
   )
 }

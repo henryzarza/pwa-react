@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 import { axiosInstance } from '../../../config/api';
 import Card from '../../components/Card';
 import Loader from '../../components/Loader';
+import { saveData } from '../../../services/indexedDB';
+import { showNotification } from '../../../services/notification';
 
 import './style.css';
 
@@ -10,9 +12,18 @@ class Characters extends Component {
   state = { data: [], loading: true };
 
   componentDidMount() {
-    axiosInstance.get('/characters')
-      .then(response => this.setState({ data: response.data, loading: false }))
-      .catch(error => console.log('Error', error))
+    if (navigator.onLine) {
+      axiosInstance.get('/characters')
+        .then(response => {
+          saveData(response.data);
+          this.setState({ data: response.data, loading: false });
+          showNotification("This is site work offline. It's PWA :)");
+        })
+        .catch(error => console.log('Error', error))
+    } else {
+      // GET data from indexedDB
+      showNotification("Connection not available but keep calm we're PWA");
+    }
   }
 
   render() {
