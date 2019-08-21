@@ -17,7 +17,7 @@
 }
 
 .navbar-text {
-  color: var(--blue);
+  color: var(--gray);
   font-size: 1rem;
   font-weight: 600;
 }
