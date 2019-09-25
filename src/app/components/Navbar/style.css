@@ -1,23 +1,23 @@
 .navbar {
   align-items: center;
-  background-color: var(--white);
-  box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.3);
+  background-color: var(--gray);
+  box-shadow: 1px 3px 4px rgba(0, 0, 0, 0.5);
   display: flex;
-  height: 4rem;
-  justify-content: space-between;
+  justify-content: center;
   left: 0;
-  padding: 0.6rem 1rem;
+  padding: 0.8rem 1rem;
   position: fixed;
   right: 0;
   z-index: 1;
 }
 
 .logo {
+  margin-right: 1rem;
   width: 3rem;
 }
 
 .navbar-text {
-  color: var(--gray);
-  font-size: 1rem;
-  font-weight: 600;
+  color: var(--white);
+  font-size: 2rem;
+  font-weight: 800;
 }

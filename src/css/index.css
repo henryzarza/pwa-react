@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Bangers');
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Barlow:600&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,800&display=swap');
 @import './variables.css';
 * {
   box-sizing: border-box;
@@ -9,7 +9,7 @@
 }
 
 body {
-  background-image: linear-gradient(to right top, #0282F9, #3494FB, #55A6FC, #73B7FB, #91C7FA);
+  background-color: var(--gray);
   -webkit-font-smoothing: antialiased;
   min-height: 100vh;
   -moz-osx-font-smoothing: grayscale;

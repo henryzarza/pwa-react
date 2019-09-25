@@ -7,8 +7,8 @@ function Card({ data: { description, height, name, photo, realName, weight } }) 
   return (
     <div className="card">
       <img className="card-image" src={photo} alt={name} />
-      <h3 className="character-title">{name}</h3>
       <div className="card-content">
+        <h3 className="character-title">{name}</h3>
         <h6 className="character-name">{realName}</h6>
         <p>{description}</p>
         <div className="character-info">
