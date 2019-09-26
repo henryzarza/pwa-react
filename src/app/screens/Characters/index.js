@@ -4,7 +4,7 @@ import { axiosInstance } from '../../../config/api';
 import Card from '../../components/Card';
 import Loader from '../../components/Loader';
 import { createDataBase, getHeroes } from '../../../services/indexedDB';
-import { showNotification } from '../../../services/notification';
+// import { showNotification } from '../../../services/notification';
 
 import './style.css';
 
@@ -16,7 +16,7 @@ class Characters extends Component {
       this.getData();
     } else {
       this.getOfflineData();
-      showNotification("Connection not available but keep calm we're PWA");
+      // showNotification("Connection not available but keep calm we're PWA");
     }
   }
 
@@ -34,10 +34,10 @@ class Characters extends Component {
     try {
       createDataBase(response.data);
       this.setState({ data: response.data, loading: false });
-      showNotification("This is site work offline. It's PWA :)");
+      // showNotification("This is site work offline. It's PWA :)");
     } catch (error) {
       this.setState({ loading: false });
-      showNotification(`Oops error: ${error}`);
+      // showNotification(`Oops error: ${error}`);
     }
   };
 

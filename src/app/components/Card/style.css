@@ -49,6 +49,7 @@
   border-radius: 1rem;
   color: var(--white);
   margin-right: 0.8rem;
+  min-height: 1.5rem;
   padding: 0.2rem 0.5rem;
 }
 
